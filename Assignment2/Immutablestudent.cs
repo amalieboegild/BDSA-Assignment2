@@ -1,22 +1,22 @@
-﻿using System;
+using System;
 
 namespace Assignment2
 {
-    public class Student
+    public record Immutablestudent
     {
         public int Id { get; init; }
 
-        public string GivenName { get; set; }
+        public string GivenName { get; init; }
 
-        public string Surname { get; set; }
+        public string Surname { get; init; }
         public Status Status 
         { 
-            get; set;
+            get; init;
         }
         
-        public DateTime StartDate{get; set;}
-        public DateTime EndDate{get; set;}
-        public DateTime GraduationDate{get; set;}
+        public DateTime StartDate{get; init;}
+        public DateTime EndDate{get; init;}
+        public DateTime GraduationDate{get; init;}
         
 
         public override string ToString()
