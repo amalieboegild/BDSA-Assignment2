@@ -5,7 +5,7 @@ namespace Assignment2.Tests
 {
     public class UnitTest1
     {
-        [Fact]
+         [Fact]
         public void Test_Student_ToString()
         {
             var start = new DateTime(2020,8,8);
