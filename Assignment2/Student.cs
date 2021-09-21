@@ -38,6 +38,6 @@ namespace Assignment2
         public override string ToString()
         {
             return "Id and name: " + Id + " " + GivenName+ " " + Surname + ". Status: " + Status + ", Startdate: " + StartDate + " Enddate: " + EndDate + " Graduationdate: " + GraduationDate;
-        }
+        } 
     }
 }
