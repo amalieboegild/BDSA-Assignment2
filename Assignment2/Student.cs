@@ -11,10 +11,25 @@ namespace Assignment2
         public string Surname { get; set; }
         public Status Status 
         { 
-            get; set;
+            get
+            {
+                if(StartDate>DateTime.Now){
+                    return Status.New;
+                } else if(StartDate<DateTime.Now && DateTime.Now<EndDate){
+                    return Status.Active;
+                } else if(GraduationDate==EndDate && DateTime.Now>=EndDate){
+                    return Status.Graduated;    
+                } else if(GraduationDate>EndDate){
+                    return Status.Dropout;
+                } else{
+                    return Status.Active;
+                }
+            } 
         }
         
         public DateTime StartDate{get; set;}
+        
+        
         public DateTime EndDate{get; set;}
         public DateTime GraduationDate{get; set;}
         

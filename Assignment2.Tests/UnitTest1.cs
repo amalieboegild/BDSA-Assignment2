@@ -15,7 +15,6 @@ namespace Assignment2.Tests
                 Id = 22,
                 GivenName = "Amalie",
                 Surname = "Bøgild",
-                Status = Status.Active,
                 StartDate = start,
                 EndDate = end,
                 GraduationDate = graduation
