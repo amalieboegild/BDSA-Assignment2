@@ -19,7 +19,7 @@ namespace Assignment2.Tests
                 EndDate = end,
                 GraduationDate = graduation
             };
-            string expected = "Id and name: 22 Amalie Bøgild. Status: Active, Startdate: 08/08/2020 00:00:00 Enddate: 06/06/2023 00:00:00 Graduationdate: 25/06/2023 00:00:00";
+            string expected = "Id and name: 22 Amalie Bøgild. Status: Active, Startdate: 08/08/2020 00:00:00 Enddate: 06/06/2023 00:00:00 Graduationdate: 06/25/2023 00:00:00";
             string actual = s.ToString();
             Assert.Equal(expected,actual);
         }
@@ -38,7 +38,7 @@ namespace Assignment2.Tests
                 EndDate = end,
                 GraduationDate = graduation
             };
-            string expected = "Id and name: 22 Amalie Bøgild. Status: Active, Startdate: 08/08/2020 00:00:00 Enddate: 06/06/2023 00:00:00 Graduationdate: 25/06/2023 00:00:00";
+            string expected = "Id and name: 22 Amalie Bøgild. Status: Active, Startdate: 08/08/2020 00:00:00 Enddate: 06/06/2023 00:00:00 Graduationdate: 06/25/2023 00:00:00";
             string actual = s.ToString();
             Assert.Equal(expected,actual);
         }
