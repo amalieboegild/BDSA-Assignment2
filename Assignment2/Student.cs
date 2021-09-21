@@ -13,11 +13,12 @@ namespace Assignment2
         { 
             get
             {
-                if(StartDate>DateTime.Now){
+                DateTime now = DateTime.Now;
+                if(StartDate>now){
                     return Status.New;
-                } else if(StartDate<DateTime.Now && DateTime.Now<EndDate){
+                } else if(StartDate<now && now<EndDate){
                     return Status.Active;
-                } else if(GraduationDate==EndDate && DateTime.Now>=EndDate){
+                } else if(GraduationDate==EndDate && now>=EndDate){
                     return Status.Graduated;    
                 } else if(GraduationDate>EndDate){
                     return Status.Dropout;

@@ -34,7 +34,6 @@ namespace Assignment2.Tests
                 Id = 22,
                 GivenName = "Amalie",
                 Surname = "Bøgild",
-                Status = Status.Active,
                 StartDate = start,
                 EndDate = end,
                 GraduationDate = graduation
@@ -54,7 +53,6 @@ namespace Assignment2.Tests
                 Id = 22,
                 GivenName = "Amalie",
                 Surname = "Bøgild",
-                Status = Status.Active,
                 StartDate = start,
                 EndDate = end,
                 GraduationDate = graduation
@@ -63,7 +61,6 @@ namespace Assignment2.Tests
                 Id = 23,
                 GivenName = "Amalie",
                 Surname = "Bøgild",
-                Status = Status.Active,
                 StartDate = start,
                 EndDate = end,
                 GraduationDate = graduation
@@ -71,6 +68,63 @@ namespace Assignment2.Tests
 
             Assert.True(Record.Equals(s,s));
             Assert.False(Record.Equals(st,s));
+        }
+
+        [Fact]
+        public void Test_New_Status()
+        {
+            var start = new DateTime(2024,8,8);
+            var end = new DateTime(2025,6,3);
+            var graduation = new DateTime(2025,6,25);
+            var s = new Student{
+                Id = 22,
+                GivenName = "Amalie",
+                Surname = "Bøgild",
+                StartDate = start,
+                EndDate = end,
+                GraduationDate = graduation
+            };
+            Status expected = Status.New;
+            Status actual = s.Status;
+            Assert.Equal(expected,actual);
+        }
+
+        [Fact]
+        public void Test_Graduated_Status()
+        {
+            var start = new DateTime(2020,8,8);
+            var end = new DateTime(2021,9,17);
+            var graduation = new DateTime(2021,9,17);
+            var s = new Student{
+                Id = 22,
+                GivenName = "Amalie",
+                Surname = "Bøgild",
+                StartDate = start,
+                EndDate = end,
+                GraduationDate = graduation
+            };
+            Status expected = Status.Graduated;
+            Status actual = s.Status;
+            Assert.Equal(expected,actual);
+        }
+
+        [Fact]
+        public void Test_Dropout_Status()
+        {
+            var start = new DateTime(2020,8,8);
+            var end = new DateTime(2021,6,17);
+            var graduation = new DateTime(2021,9,18);
+            var s = new Student{
+                Id = 22,
+                GivenName = "Amalie",
+                Surname = "Bøgild",
+                StartDate = start,
+                EndDate = end,
+                GraduationDate = graduation
+            };
+            Status expected = Status.Dropout;
+            Status actual = s.Status;
+            Assert.Equal(expected,actual);
         }
     }
 }
